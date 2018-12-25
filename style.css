@@ -1,0 +1,255 @@
+*{
+	box-sizing: border-box;
+}
+html{
+	font-size: 100%;	
+}
+body{
+	background-color: #dbf9ff;
+	color: #6fb2ff;
+	margin:0;
+}
+h1, h2{
+	font-weight: bold;
+}
+h1{
+	font-size:2.5rem;
+	line-height: 2.5rem;
+}
+p{
+	font-size:0.875rem;
+	line-height:1.5rem;
+}
+.black{
+	color:#4f555c;
+}
+.btn-answer .fa-laugh{
+	color:#fcc200;
+}
+.btn-answer .fa-tired{
+	color:#6fb1fe;
+}
+.btn-answer .fas{
+	line-height: 77px;
+}
+.btn-answer .fas:hover{
+	font-size:3.5em;
+	transition:all 0.3s ease-in-out;
+}
+.progress{
+	border-bottom: solid 4px;
+	border-top:solid 4px;
+	height:0;
+	position:fixed;
+	top:5%;
+	transition: all 0.5s ease-out;
+}
+#question{
+	height:320px;
+	margin: 0 auto;
+	position: relative;
+	width:320px;
+}
+#bg-shape{
+	opacity:0.5;
+	position: absolute;
+}
+#main-shape{
+	position: absolute;
+}
+.square{
+	border:solid 160px;
+	height:0;
+	top:0;
+	width:0;
+}
+.triangle{
+	border-bottom:solid 277px;
+	border-left:solid 160px transparent;
+	border-right:solid 160px transparent;
+	border-top:solid 43px transparent;
+	height:0;
+	top:-21%;
+	transform-origin:50% 71.05%;
+	width:0;
+}
+.circle{
+	border:solid 160px;
+	border-radius:50%;
+	height:0;
+	top:0;
+	width:0;
+}
+.rectangle{
+	border-bottom:solid 80px;
+	border-left:solid 160px;
+	border-right:solid 160px;
+	border-top:solid 80px;
+	height:0;
+	top:calc(50% - 80px);
+	width:0;
+}
+.dot{
+	border:2px solid #000;
+	border-radius:50%;
+	height:0;
+	position: absolute;
+	transform:translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	width:0;
+}
+.btn-start{
+	background-color: rgb(224, 248, 255);
+	border-radius:2em;
+	cursor: pointer;
+	display:inline-block;
+	font-weight:bold;
+	padding:0.8em 2.4em;
+}
+.btn-again{
+	border-radius:2em;
+	border:solid 2px;
+	cursor: pointer;
+	display:inline-block;
+	font-weight:bold;
+	padding:0.8em 2.4em;
+}
+.container{
+	height:100vh;
+	position: relative;
+	width:100vw;
+}
+.content-center{
+	left:50%;
+	top:50%;
+	transform:translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	position: absolute;
+}
+.container .content-center{
+	text-align: center;
+}
+.init-wrapper{
+	align-items: center;
+	display:flex;
+	flex-wrap: wrap;
+}
+.init-left{
+	height:100vh;
+	width:50vw;
+}
+.init-right{
+	background-color:#fff;
+	height:100vh;
+	position: relative;
+	width:50vw;
+}
+.content-80{
+	max-width:480px;
+	width:80%;
+}
+.init-right p{
+	margin-bottom: 3rem;
+}
+.score-text{
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	margin-top:3rem;
+	opacity: 0.6;
+}
+.description{
+	margin-bottom:0;
+}
+#btn-yes{
+	cursor: pointer;
+	left:20%;
+	position: absolute;
+	top:50%;
+	text-align: center;
+	transform:translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+}
+#btn-no{
+	cursor: pointer;
+	position: absolute;
+	right:20%;
+	text-align: center;
+	top:50%;
+	transform:translateX(50%) translateY(-50%);
+	-webkit-transform: translateX(50%) translateY(-50%);
+}
+.text-yes{
+	color:#1DD1A1;
+	font-size: 12px;
+	font-weight: bold;
+	left:20%;
+	position: absolute;
+	top:62%;
+	transform:translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+}
+.text-no{
+	color:#DC4250;
+	font-size: 12px;
+	font-weight: bold;
+	position: absolute;
+	right:20%;
+	top:62%;
+	transform:translateX(50%) translateY(-50%);
+	-webkit-transform: translateX(50%) translateY(-50%);
+}
+.btn-answer{
+	background-color: #fff;
+	border:solid 3px transparent;
+	border-radius: 50%;
+	height:80px;
+	width:80px;
+}
+@keyframes correct{
+	100%{
+		border:solid 3px #1DD1A1;
+	}
+}
+@keyframes wrong{
+	100%{
+		border:solid 3px #DC4250;
+	}
+}
+@keyframes fadeIn{
+	0%{
+		top:60%;
+		opacity: 0;
+	}
+	100%{
+		top:62%;
+		opacity: 1;
+	}
+}
+@keyframes display{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.feedback{
+	font-size:0.625rem;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	opacity: 0.6;
+}
+.result{
+	font-weight:normal;
+}
+.icon-circle{
+	background-color: #fff;
+	border-radius: 50%;
+	height:100px;
+	margin:0 auto;
+	width:100px;
+}
+.icon-circle .fas{
+	line-height: 100px;
+}
